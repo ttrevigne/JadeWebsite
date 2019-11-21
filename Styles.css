@@ -1,7 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .navbar {
   overflow: hidden;
   background-color: white;
-  position: fixed; /* Set the navbar to fixed position */
+  position: sticky; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
   box-shadow: 0 2px 2px 2px rgba(0,0,0,.2);
@@ -29,7 +33,7 @@
 .btn {
   font-family: sans-serif;
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -42,19 +46,40 @@
   border-radius: 5px;
 }
 
+.btn:hover {
+  background: white;
+  color: green;
+  border: 2px solid green;
+}
+
 .video {
   min-height: 100%;
   min-width: 100%;
   object-fit: cover;
   flex: 1;
+  z-index: 0;
 }
 
+#landing {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 40%;
+  z-index: 1;
+  font-family: sans-serif;
+  color: green;
+  font-size: 150%;
+}
+
+#landing p {
+  color: white;
+}
 .section {
   padding: 100px;
 }
 
 .header {
-  margin-top: 5%;
+  margin-top: 12%;
   font-family: sans-serif;
   color: green;
 }
@@ -67,6 +92,8 @@ h1 {
   width:98%;
   height:30%%;
   padding: 35px 15px 5px;
+  color: white;
+  font-size: 110%;
   }
 .boxContainer:before,
 .boxContainer:after {
@@ -105,12 +132,7 @@ h1 {
   margin-top: 5%;
 }
 
-p {
-  color: white;
-  padding:5px 10px;
-  text-align:center;
-  font-family: sans-serif;
-}
+
 body {
   background: #d6d6d6;
   margin: 0;

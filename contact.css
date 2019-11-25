@@ -1,0 +1,120 @@
+.navbar {
+  overflow: hidden;
+  background-color: white;
+  position: sticky; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  box-shadow: 0 2px 2px 2px rgba(0,0,0,.2);
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: right;
+  padding: 3% 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+.navbar a:hover {
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+
+.boxCustomer {
+  width:98%;
+  height:30%%;
+  padding: 35px 15px 5px;
+  color: white;
+  font-size: 110%;
+  text-align: center;
+  }
+.boxCustomer:before,
+.boxCustomer:after {
+  content:"";
+  display:table;
+  clear: both;
+}
+.boxCustomer div{
+  float:left;
+  width:35%;
+  height:75%;
+}
+
+#contactUS{
+  background-color: green;
+  box-shadow: 5px 10px 5px rgba(0,0,0,.2);
+  text-align: center;
+  font-family: sans-serif;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 6px;
+}
+
+label {
+  font-size: 250%;
+  border-bottom: 3px solid white;
+  border-radius: 3px;
+}
+
+input[type=text], input[type=email], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+input[type=submit] {
+  width: 80%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form {
+  font-family: sans-serif;
+  display: inline-block;
+}
+
+textarea {
+  font-family: sans-serif;
+  width: 80%;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  resize: none;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#contact {
+  text-align: center;
+}
+
+.header {
+  font-size: 200%;
+  font-family: sans-serif;
+  color: green;
+}
+
+body {
+  background: #d6d6d6;
+  margin: 0;
+  padding: 0;
+}

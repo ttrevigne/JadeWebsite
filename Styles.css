@@ -119,6 +119,13 @@ html {
   z-index: 0;
 }
 
+#tunnel {
+  height: 50%;
+  width: 50%;
+  border: none;
+  border-radius: 6px;
+}
+
 #landing {
   position: absolute;
   text-align: center;
@@ -197,10 +204,22 @@ h1 {
   border-radius: 6px;
 }
 
+#driveSignUpBox{
+  background-color: green;
+  margin-left:7%;
+  margin-right:5%;
+  box-shadow: 5px 10px 5px rgba(0,0,0,.2);
+  text-align: center;
+  font-family: sans-serif;
+  border: none;
+  border-radius: 6px;
+
+}
+
 #driveBox {
   height: 50%%;
   width: 50%;
-  margin-left: 7%;
+  margin-left: 5%;
   margin-right: 5%;
   border: none;
   border-radius: 6px;

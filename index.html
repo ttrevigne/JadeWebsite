@@ -4,6 +4,7 @@
     <title>Jade</title>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link rel = "stylesheet" type = "text/css" href = "Styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <div>
@@ -36,11 +37,11 @@
       <a onClick="document.getElementById('video').scrollIntoView();">Home</a>
       <img src="Jade logo.png" alt="Jade Logo" id = "logo">
     </div>
-    <section class="aboutUs" id="about">
+    <section id="about">
       <div class="header">
         <h1 align="center">About Us</h1>
       </div>
-      <div class="boxContainer">
+      <div class="boxContainer" data-aos="fade-up">
         <div id="box1">
           <image src="car.png" alt="Car" width=200px height=200px
           class="center">
@@ -61,11 +62,11 @@
         </div>
       </div>
     </section>
-    <section class="ride" id="ride">
+    <section id="ride">
       <div class="header">
         <h1 align="center">Ride</h1>
       </div>
-      <div class="boxContainer">
+      <div class="boxContainer" data-aos="fade-up">
         <div style="display: none">
           <input id="origin-input" class="controls" type="text"
               placeholder="Enter an origin location">
@@ -206,7 +207,7 @@
       <div class="header">
         <h1 align="center">Drive</h1>
       </div>
-      <div class="boxContainer">
+      <div class="boxContainer" data-aos="fade-up">
         <div id="driveSignUpBox">
           <image src="car.png" alt="Car" width=25% height=25%
           class="center">
@@ -245,6 +246,10 @@
     };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
   </script>
   </body>
 </html>

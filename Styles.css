@@ -2,6 +2,20 @@ html {
   scroll-behavior: smooth;
 }
 
+.come-in {
+  transform: translateY(300px);
+  animation: come-in 0.8s ease forwards;
+}
+
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
 /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {

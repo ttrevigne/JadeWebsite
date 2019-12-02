@@ -2,6 +2,17 @@ html {
   scroll-behavior: smooth;
 }
 
+#username {
+  float: right;
+  display: block;
+  color: green;
+  text-align: right;
+  padding: 3% 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+  margin-right: 15%;
+  font-weight: bold;
+}
 .come-in {
   transform: translateY(300px);
   animation: come-in 0.8s ease forwards;

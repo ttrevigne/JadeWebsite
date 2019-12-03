@@ -3,36 +3,64 @@
     <meta charset="utf-8">
     <title>Jade</title>
     <link rel = "stylesheet" type = "text/css" href = "contact.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
   </head>
   <body>
+    <!-- Navigation bar on the Contact Us page-->
     <div class ="navbar">
-      <a href="index.html">Sign Out</a>
-      <a href="index.html">Login</a>
+      <a href="Jade SignUp.html">Sign Up</a>
+      <a href="Jade Login.html">Login</a>
       <a href="contact.html">Contact Us</a>
-      <a href="index.html#drive">Drive</a>
-      <a href="index.html#ride">Ride</a>
-      <a href="index.html#about">About Us</a>
-      <a href="index.html">Home</a>
+      <a href="#Jade">Drive</a>
+      <a href="Jade.html#ride">Ride</a>
+      <a href="Jade.html#about">About Us</a>
+      <a href="Jade.html">Home</a>
       <img src="Jade logo.png" alt="Jade Logo" id = "logo">
     </div>
+
     <section class="contact" id="contact">
+      <div class="header">
+        <h1 align="center">Contact Us</h1>
+      </div>
+
+      <!-- Contact Us form that includes input for name, email, and text area for comments-->
       <div class="boxCustomer">
         <div id="contactUS">
           <form action ="#contact">
             <label>Contact Us</label><br><br><br>
-            <input type="text" placeholder="Name" name="LastName"><br>
-            <input type="email" placeholder="Email" name="email"><br>
-            <textarea name="message" rows="10"
-            placeholder="Please describe your issue."cols="30"></textarea>
-            <input type="submit">
+            Name <br><input type="text" id="LastName"><br>
+            Email <br><input type="email" id="email"><br>
+            <textarea id="message" rows="10"
+            cols="30" placeholder = "Please describe your issue."></textarea>
+            <button type = "submit" onclick= "send()">Submit</button>
           </form>
         </div>
       </div>
     </section>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
     <script>
-      AOS.init();
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAz-XqvWNK9sz99IapkZ1_fFvqHjEagdNc",
+        authDomain: "jade-1575089849041.firebaseapp.com",
+        databaseURL: "https://jade-1575089849041.firebaseio.com",
+        projectId: "jade-1575089849041",
+        storageBucket: "jade-1575089849041.appspot.com",
+        messagingSenderId: "654073477285",
+        appId: "1:654073477285:web:2677feb20856620673f54c"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
     </script>
+
+    <script src="contact.js"></script>
   </body>
 </html>

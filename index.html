@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class ="navbar">
-      <a onClick="googleSignout()" id="logout" class = "hidden">Sign Out</a>
+      <a onClick="googleSignout()">Sign Out</a>
       <a onClick="googleSignin()">Login</a>
       <a href="contact.html">Contact Us</a>
       <a onClick="document.getElementById('drive').scrollIntoView(false);">
@@ -38,15 +38,6 @@
       <img src="Jade logo.png" alt="Jade Logo" id = "logo">
       <label id="username"></label>
     </div>
-    <script>
-      window.addEventListener("load", initializeLog, false);
-      var logout;
-
-      function initializeLog() {
-            logout = document.getElementById("logout");
-
-      }
-    </script>
     <section id="about">
       <div class="header">
         <h1 align="center">About Us</h1>
@@ -265,10 +256,8 @@
     <script>
       window.addEventListener("load", initialize, false);
       var account;
-
       function initialize() {
             account = document.getElementById("username");
-
           }
       var provider = new firebase.auth.GoogleAuthProvider();
       function googleSignin() {
@@ -276,8 +265,6 @@
             var token = result.credential.accessToken;
             var user = result.user;
             account.innerHTML = "Welcome, " + user.displayName + "!"
-            logout.ClassList.remove("hidden");
-
          }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -286,7 +273,6 @@
             console.log(error.message)
          });
         }
-
         function googleSignout() {
          firebase.auth().signOut().then(function() {
             username.innerHTML = "";

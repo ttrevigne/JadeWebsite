@@ -5,8 +5,18 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link rel = "stylesheet" type = "text/css" href = "Styles.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
+    <script>
+      function bookRide() {
+        alert('Congratulations, your ride has been booked! A driver will contact you in approximately '
+        + Math.floor(Math.random()*16) + " minutes.");
+      }
+      function drive() {
+        alert("Thank you for your interest in becoming a driver for Jade! Unfortunately, we are not taking applications for new drivers at this time.");
+      }
+    </script>
     <div>
       <video autoplay loop muted playsinline class = "video" id = "video">
         <source  src = "Home Page Time Lapse.mp4" type="video/mp4">
@@ -95,7 +105,7 @@
           <p>Jade incorporates walking, ride-sharing, and transportation routes
             to your destination so that you can compare routes prior to booking
             a ride.</p>
-          <button class="btnContent">Book Ride!</button>
+          <button class="btnContent" onClick="bookRide()">Book Ride!</button>
         </div>
       </div>
       <script>
@@ -216,7 +226,7 @@
           <p>Would you like to be a part of the global team that drives Jade?
             Start today by filling out an application!</p>
 
-            <button class="btnContent">Drive with Jade</button>
+            <button class="btnContent" onClick="drive()">Drive with Jade</button>
         </div>
         <div id="driveBox">
           <video autoplay loop muted playsinline class = "video" id = "tunnel">
@@ -227,15 +237,12 @@
       </div>
     </section>
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="/__/firebase/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
 
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js">
     </script>
     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js">
-    </script>
-    <script src="/__/firebase/7.5.0/firebase-firestore.js"></script>
-    <script>
       // Your web app's Firebase configuration
       var firebaseConfig = {
         apiKey: "AIzaSyAz-XqvWNK9sz99IapkZ1_fFvqHjEagdNc",

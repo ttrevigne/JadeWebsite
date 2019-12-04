@@ -38,6 +38,15 @@
       <img src="Jade logo.png" alt="Jade Logo" id = "logo">
       <label id="username"></label>
     </div>
+    <script>
+      window.addEventListener("load", initializeLog, false);
+      var logout;
+
+      function initializeLog() {
+            logout = document.getElementById("logout");
+
+      }
+    </script>
     <section id="about">
       <div class="header">
         <h1 align="center">About Us</h1>
@@ -254,14 +263,10 @@
       AOS.init();
     </script>
     <script>
-      window.addEventListener("load", initializeAccount, false);
-      window.addEventListener("load", initializeLogout, false);
+      window.addEventListener("load", initialize, false);
       var account;
-      var logout;
-      function initializeLogout() {
-            logout = document.getElementById("logout");
-      }
-      function initializeAccount() {
+
+      function initialize() {
             account = document.getElementById("username");
 
           }

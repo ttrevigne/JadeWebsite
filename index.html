@@ -273,6 +273,7 @@
             console.log(error.message)
          });
         }
+        
         function googleSignout() {
          firebase.auth().signOut().then(function() {
             username.innerHTML = "";

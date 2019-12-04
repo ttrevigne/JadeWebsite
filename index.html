@@ -271,8 +271,7 @@
             var user = result.user;
 
             account.innerHTML = "Welcome, " + user.displayName + "!";
-            logout.classList.remove("hidden");
-            login.classList.add("hidden");
+
          }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -286,7 +285,7 @@
             username.innerHTML = "";
             logout.classList.add("hidden");
             login.classList.remove("hidden");
-            
+
             console.log('Signout Succesfull')
          }, function(error) {
             console.log('Signout Failed')

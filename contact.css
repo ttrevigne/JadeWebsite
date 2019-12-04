@@ -18,7 +18,7 @@
 }
 
 .navbar a:hover {
-  background: green;
+  background: #00a86b;
   color: white;
   cursor: pointer;
 }

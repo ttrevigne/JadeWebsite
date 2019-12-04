@@ -2,10 +2,17 @@ html {
   scroll-behavior: smooth;
 }
 
+.hidden {
+  visibility:hidden;
+}
+.visible {
+  visibility: visible;
+}
+
 #username {
   float: right;
   display: block;
-  color: green;
+  color: #00a86b;
   text-align: right;
   padding: 3% 16px;
   text-decoration: none;
@@ -119,7 +126,7 @@ html {
   font-family: sans-serif;
   top: 65%;
   left: 50%;
-  background-color: green;
+  background-color: #00a86b;
   color: white;
   font-size: 16px;
   padding: 12px 24px;
@@ -142,7 +149,7 @@ html {
 .btnContent:hover {
   background: grey;
   color: white;
-  border: 2px solid green;
+  border: 2px solid #00a86b;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
@@ -154,7 +161,7 @@ html {
 .btn:hover {
   background: white;
   color: green;
-  border: 2px solid green;
+  border: 2px solid #00a86b;
   padding: 12px 24px;
   border: none;
   cursor: pointer;
@@ -185,7 +192,7 @@ html {
   top: 35%;
   z-index: 1;
   font-family: sans-serif;
-  color: white;
+  color: #00a86b;
   font-size: 150%;
 }
 
@@ -257,7 +264,7 @@ h1 {
 }
 
 #driveSignUpBox{
-  background-color: green;
+  background-color: #00a86b;
   margin-left:7%;
   margin-right:5%;
   box-shadow: 5px 10px 5px rgba(0,0,0,.2);

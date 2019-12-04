@@ -7,25 +7,28 @@
   <body>
     <!-- Navigation bar on the Contact Us page-->
     <div class ="navbar">
-      <a href="index.html">Sign Up</a>
-      <a href="index.html">Login</a>
+      <a href="Jade SignUp.html">Sign Up</a>
+      <a href="Jade Login.html">Login</a>
       <a href="contact.html">Contact Us</a>
-      <a href="index.html#drive">Drive</a>
-      <a href="index.html#ride">Ride</a>
-      <a href="index.html#about">About Us</a>
-      <a href="index.html">Home</a>
+      <a href="#Jade">Drive</a>
+      <a href="Jade.html#ride">Ride</a>
+      <a href="Jade.html#about">About Us</a>
+      <a href="Jade.html">Home</a>
       <img src="Jade logo.png" alt="Jade Logo" id = "logo">
     </div>
 
     <section class="contact" id="contact">
+      <div class="header">
+        <h1 align="center">Contact Us</h1>
+      </div>
 
       <!-- Contact Us form that includes input for name, email, and text area for comments-->
       <div class="boxCustomer">
         <div id="contactUS">
           <form action ="#contact">
-            <label>Contact Us</label><br><br>
-            <input type="text" id="LastName" placeholder="Name"><br>
-            <input type="email" id="email" placeholder="Email"><br>
+            <label>Contact Us</label><br><br><br>
+            Name <br><input type="text" id="LastName"><br>
+            Email <br><input type="email" id="email"><br>
             <textarea id="message" rows="10"
             cols="30" placeholder = "Please describe your issue."></textarea>
             <button type = "submit" onclick= "send()">Submit</button>

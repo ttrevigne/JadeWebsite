@@ -270,8 +270,10 @@
          firebase.auth().signInWithPopup(provider).then(function(result) {
             var token = result.credential.accessToken;
             var user = result.user;
-            document.cookie = "userCookie=" + result.credential.accessToken;
-            document.cookie = "tokenCookie=" + result.user;
+            tokenCookie = token;
+            userCookie = user;
+            document.cookie = "userCookie=" + user;
+            document.cookie = "tokenCookie=" + token;
             account.innerHTML = "Welcome, " + user.displayName + "!";
             logout.classList.remove("hidden");
             login.classList.add("hidden");

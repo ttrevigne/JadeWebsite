@@ -25,8 +25,8 @@
       </div>
     </div>
     <div class ="navbar">
-      <a onClick="googleSignout()" class="hidden" id="sign-out">Sign Out</a>
-      <a onClick="googleSignin()" id="login">Login</a>
+      <a onClick="googleSignout()">Sign Out</a>
+      <a onClick="googleSignin()">Login</a>
       <a href="contact.html">Contact Us</a>
       <a onClick="document.getElementById('drive').scrollIntoView(false);">
         Drive</a>
@@ -95,7 +95,7 @@
           <p>Jade incorporates walking, ride-sharing, and transportation routes
             to your destination so that you can compare routes prior to booking
             a ride.</p>
-          <button class="btnContent" onClick="bookRide()">Book Ride!</button>
+          <button class="btnContent">Book Ride!</button>
         </div>
       </div>
       <script>
@@ -226,7 +226,7 @@
         </div>
       </div>
     </section>
-
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="/__/firebase/7.5.0/firebase-app.js"></script>
 
     <!-- Add Firebase products that you want to use -->
@@ -256,27 +256,15 @@
     <script>
       window.addEventListener("load", initialize, false);
       var account;
-      var logout;
-      var login;
-      var tokenCookie = null;
-      var userCookie = null;
       function initialize() {
             account = document.getElementById("username");
-            logout = document.getElementById("sign-out");
-            login = document.getElementById("login");
           }
       var provider = new firebase.auth.GoogleAuthProvider();
       function googleSignin() {
          firebase.auth().signInWithPopup(provider).then(function(result) {
             var token = result.credential.accessToken;
             var user = result.user;
-            tokenCookie = token;
-            userCookie = user;
-            document.cookie = "userCookie=" + user;
-            document.cookie = "tokenCookie=" + token;
-            account.innerHTML = "Welcome, " + user.displayName + "!";
-            logout.classList.remove("hidden");
-            login.classList.add("hidden");
+            account.innerHTML = "Welcome, " + user.displayName + "!"
          }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -288,23 +276,10 @@
         function googleSignout() {
          firebase.auth().signOut().then(function() {
             username.innerHTML = "";
-            logout.classList.add("hidden");
-            login.classList.remove("hidden");
-            document.cookie =
-            "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
             console.log('Signout Succesfull')
          }, function(error) {
             console.log('Signout Failed')
          });
-        }
-        function bookRide() {
-          if (tokenCookie && userCookie != null) {
-            alert("Congratulations, your ride has been booked! A driver will
-            contact you in approximately " + Math.floor(Math.radom()*16) +
-            " minutes.")
-          }else {
-            googleSignin();
-          }
         }
     </script>
   </body>

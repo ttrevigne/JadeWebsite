@@ -109,7 +109,7 @@ html {
 }
 
 .navbar a:hover {
-  background: #00a86b;
+  background: green;
   color: white;
   cursor: pointer;
 }
@@ -206,7 +206,7 @@ html {
 .header {
   margin-top: 12%;
   font-family: sans-serif;
-  color: #00a86b;
+  color: green;
 }
 
 h1 {

@@ -3,7 +3,10 @@ html {
 }
 
 .hidden {
-  visibility: hidden;
+  visibility:hidden;
+}
+.visible {
+  visibility: visible;
 }
 
 #username {

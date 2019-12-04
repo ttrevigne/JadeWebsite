@@ -1,9 +1,0 @@
-{
-  "rules": {
-    "https://jade-1575089849041-c01e7.firebaseio.com": {
-    // Allow the request if the condition for each method is true.
-      ".read": true,
-      ".write": true
-    }
-  }
-}

@@ -258,8 +258,7 @@
       var account;
       var logout;
       var login;
-      var tokenCookie = null;
-      var userCookie = null;
+
       function initialize() {
             account = document.getElementById("username");
             logout = document.getElementById("sign-out");
@@ -270,8 +269,7 @@
          firebase.auth().signInWithPopup(provider).then(function(result) {
             var token = result.credential.accessToken;
             var user = result.user;
-            document.cookie = "userCookie=" + result.credential.accessToken;
-            document.cookie = "tokenCookie=" + result.user;
+
             account.innerHTML = "Welcome, " + user.displayName + "!";
             logout.classList.remove("hidden");
             login.classList.add("hidden");
@@ -288,8 +286,7 @@
             username.innerHTML = "";
             logout.classList.add("hidden");
             login.classList.remove("hidden");
-            document.cookie =
-            "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            
             console.log('Signout Succesfull')
          }, function(error) {
             console.log('Signout Failed')

@@ -25,7 +25,7 @@
       </div>
     </div>
     <div class ="navbar">
-      <a onClick="googleSignout()">Sign Out</a>
+      <a onClick="googleSignout()" id="logout" class = "hidden">Sign Out</a>
       <a onClick="googleSignin()">Login</a>
       <a href="contact.html">Contact Us</a>
       <a onClick="document.getElementById('drive').scrollIntoView(false);">
@@ -256,8 +256,10 @@
     <script>
       window.addEventListener("load", initialize, false);
       var account;
+      var logout;
       function initialize() {
             account = document.getElementById("username");
+            logout = document.getElementById("logout");
           }
       var provider = new firebase.auth.GoogleAuthProvider();
       function googleSignin() {
@@ -265,6 +267,7 @@
             var token = result.credential.accessToken;
             var user = result.user;
             account.innerHTML = "Welcome, " + user.displayName + "!"
+            logout.ClassList.remove("hidden");
          }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -273,7 +276,7 @@
             console.log(error.message)
          });
         }
-        
+
         function googleSignout() {
          firebase.auth().signOut().then(function() {
             username.innerHTML = "";

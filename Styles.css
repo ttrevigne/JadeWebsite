@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 #username {
   float: right;
   display: block;

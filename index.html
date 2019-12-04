@@ -254,13 +254,16 @@
       AOS.init();
     </script>
     <script>
-      window.addEventListener("load", initialize, false);
+      window.addEventListener("load", initializeAccount, false);
+      window.addEventListener("load", initializeLogout, false);
       var account;
       var logout;
-      function initialize() {
-            account = document.getElementById("username");
+      function initializeLogout() {
             logout = document.getElementById("logout");
-            console.log(logout)
+      }
+      function initializeAccount() {
+            account = document.getElementById("username");
+
           }
       var provider = new firebase.auth.GoogleAuthProvider();
       function googleSignin() {
@@ -268,8 +271,8 @@
             var token = result.credential.accessToken;
             var user = result.user;
             account.innerHTML = "Welcome, " + user.displayName + "!"
-            document.getElementById("logout").ClassList.remove("hidden");
-            document.getElementById("logout").ClassList.add("visible");
+            logout.ClassList.remove("hidden");
+
          }).catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;

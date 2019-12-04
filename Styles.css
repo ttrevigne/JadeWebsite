@@ -233,7 +233,7 @@ h1 {
 }
 
   #box1{
-  background-color: #00a86b;
+  background-color: green;
   margin-left:5%;
   margin-right:5%;
   box-shadow: 5px 10px 5px rgba(0,0,0,.2);
@@ -243,7 +243,7 @@ h1 {
   border-radius: 6px;
 }
 #box2{
-  background-color: #00a86b;
+  background-color: green;
   margin-left:2%;
   margin-right:5%;
   box-shadow: 5px 10px 5px rgba(0,0,0,.2);
@@ -253,7 +253,7 @@ h1 {
   border-radius: 6px;
 }
 #box3{
-  background-color: #00a86b;
+  background-color: green;
   margin-left:5%;
   margin-right:2%;
   box-shadow: 5px 10px 5px rgba(0,0,0,.2);
